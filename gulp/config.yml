@@ -69,8 +69,8 @@ sass:
   src:
     - "_source/assets/styles/*.scss"
   includePaths:
-    - "./node_modules/foundation-sites/scss"
-    - "./node_modules/motion-ui/src"
+    - "node_modules/foundation-sites/scss"
+    - "node_modules/motion-ui/src"
 
 shopify:
   mainConfigSrc: "_source/config.yml"
