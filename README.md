@@ -11,11 +11,12 @@ Some technologies you should have already installed:
 * [npm](http://npmjs.com/)
 * [Gulp](http://gulpjs.com/)
 
-Gulp powers the CoffeeScript/Javascript/SASS compilation, transpiling, and
+Gulp powers the Javascript/SASS/Shopify compilation, transpiling, and
 bundling.
 
 Front-end frameworks:
 * [Zurb Foundation 6](http://foundation.zurb.com/sites/docs/grid.html)
+* [AngularJS](http://angularjs.org)
 
 Platforms:
 * [Shopify Custom Theme](http://shopify.com)
