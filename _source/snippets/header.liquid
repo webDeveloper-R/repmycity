@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="small-8 columns">
+
+    <ul class="header-bar__module header-bar__module--list">
+      {% if customer %}
+        <li>
+          <a href="/account">{{ 'layout.customer.account' | t }}</a>
+        </li>
+        <li>
+          {{ 'layout.customer.log_out' | t | customer_logout_link }}
+        </li>
+      {% else %}
+        <li>
+          {{ 'layout.customer.log_in' | t | customer_login_link }}
+        </li>
+        <li>
+          {{ 'layout.customer.or' | t }}
+        </li>
+        <li>
+          {{ 'layout.customer.create_account' | t | customer_register_link }}
+        </li>
+      {% endif %}
+    </ul>
+
+    <a href="/cart" class="cart-page-link">
+      <span class="icon icon-cart header-bar__cart-icon" aria-hidden="true"></span>
+    </a>
+
+    <a href="/cart" class="cart-page-link">
+      {{ 'layout.cart.title' | t }}<span {% if cart.item_count == 0 %}class="hidden-count"{% endif %}>:</span>
+      <span class="cart-count header-bar__cart-count{% if cart.item_count == 0 %} hidden-count{% endif %}">{{ cart.item_count }}</span>
+    </a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="top-bar">
+      <div class="top-bar-title">
+        <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+          <button class="menu-icon dark" type="button" data-toggle></button>
+        </span>
+        <strong>RepMyCity</strong>
+      </div>
+      <div id="responsive-menu">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li>
+              <a href="#">Home</a>
+              <ul class="menu vertical">
+                <li><a href="#">Sub 1</a></li>
+                <li><a href="#">Sub 2</a></li>
+              </ul>
+            </li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/page2">Page 2</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            {% include 'search-bar' with 'header' %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,7 @@ gulp.task('javascript', function(){
     .pipe(gulpif(/[.]coffee$/, coffee()))
     .pipe($.sourcemaps.init())
     .pipe($.babel())
+    // .pipe($.uglify())
     .pipe($.concat(config.filename))
     .pipe(gulp.dest(config.dest));
 });

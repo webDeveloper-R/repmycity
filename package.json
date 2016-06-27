@@ -16,6 +16,9 @@
   "author": "Julian Jorgensen",
   "homepage": "https://github.com/max",
   "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-resource": "^1.5.7",
+    "angular-route": "^1.5.7",
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
     "babel-plugin-transform-es2015-block-scoped-functions": "^6.6.5",
     "babel-plugin-transform-es2015-block-scoping": "^6.6.5",

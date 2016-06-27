@@ -12,6 +12,11 @@ javascript:
   src:
     - "node_modules/foundation-sites/node_modules/jquery/dist/jquery.js"
 
+    # AngularJS
+    # - "node_modules/angular/angular.js"
+    # - "node_modules/angular-route/angular-route.js"
+    # - "node_modules/angular-resource/angular-resource.js"
+
     # Core Foundation files, all Foundation components need this!
     - "node_modules/foundation-sites/js/foundation.core.js"
 
@@ -50,11 +55,7 @@ javascript:
     # - "node_modules/foundation-sites/js/foundation.util.touch.js"
     - "node_modules/foundation-sites/js/foundation.util.triggers.js"
 
-    # Paths to other vendor plugins
-    - "_source/assets/javascript/vendor/jquery.email-protector.js"
-
     # Paths to your own project code are here
-    # All the files in this list are concatenated into app.js
     - "_source/assets/javascript/**/*"
 
 sass:
