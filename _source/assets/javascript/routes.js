@@ -1,27 +1,23 @@
-angular.module('rmcApp', ['ngRoute']).config(function ($routeProvider) {
+// ROUTES
+var homePageUrl = '{{ "home" | asset_url | json }}';
+homePageUrl = 'https:' + homePageUrl.replace(/"/g, '');
+
+var aboutPageUrl = '{{ "about" | asset_url | json }}';
+aboutPageUrl = 'https:' + aboutPageUrl.replace(/"/g, '');
+
+
+rmcApp.config(function ($routeProvider) {
+
     $routeProvider
-      .when('/', {
-        controller: 'homeController',
-        templateUrl: "{{ 'home.liquid' | asset_url }}"
-      })
-      .when('/about', {
-        controller: 'aboutController',
-        templateUrl: "{{ 'about.liquid' | asset_url }}"
-      })
-      .otherwise({
-        redirectTo: '/'
-    });
-});
 
-angular.module('MyApp', [])
+        .when('/', {
+            controller: 'homeController',
+            templateUrl: homePageUrl
+        })
 
-.controller('aboutController', [function() {
-    angular.element(document).ready(function () {
-      console.log('hello!');
-    });
-}]);
+        .when('/about', {
+            controller: 'aboutController',
+            templateUrl: aboutPageUrl
+        })
 
-angular.module('rmcApp')
-  .controller('homeController', function ($scope) {
-    $scope.hi = 'Hola!'
 });

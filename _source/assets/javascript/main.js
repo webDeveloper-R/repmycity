@@ -1,10 +1,12 @@
-// MODULE
-var rmcApp = angular.module('rmcApp', ['ngRoute', 'ngResource']);
-
-angular.module('rmcApp', []).config(function ($interpolateProvider) {
-  $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
-});
-
-angular.module('rmcApp', []).config(function ($sceProvider) {
-  $sceProvider.enabled(false);
-});
+var rmcApp = angular.module('rmcApp', ['ngRoute', 'ngResource'])
+    .config(function($sceDelegateProvider){
+      // Whitelist shopify cdn files
+      $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        'https://cdn.shopify.com/**',
+        'http://cdn.shopify.com/**'
+      ]);
+    })
+    .config(function($interpolateProvider){
+      $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+    });
