@@ -10,14 +10,14 @@ rmcApp.config(function ($routeProvider) {
 
     $routeProvider
 
-        .when('/', {
-            controller: 'homeController',
-            templateUrl: homePageUrl
-        })
+    .when('/', {
+      controller: 'homeController',
+      templateUrl: homePageUrl
+    })
 
-        .when('/about', {
-            controller: 'aboutController',
-            templateUrl: aboutPageUrl
-        })
+    .when('/about', {
+      controller: 'aboutController',
+      templateUrl: aboutPageUrl
+    })
 
 });
